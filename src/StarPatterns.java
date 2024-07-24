@@ -11,6 +11,7 @@ public class StarPatterns {
         System.out.println(starPattern3(num));
         System.out.println(numberPattern(num));
         System.out.println(starPattern4(num));
+        System.out.println(starPattern5(num));
 
     }
 
@@ -77,5 +78,21 @@ public class StarPatterns {
     }
 
     //Let's do the same using one outer and one inner loop
+    static String starPattern5(int num){
+        StringBuilder str = new StringBuilder();
+        for (int i = 1; i <= num*2 ; i++) {
+            for (int j = 1; j <= i ; j++) {
+                if(j>(num*2-i)){
+                    break;
+                }
+                str.append("*");
+            }
+            str.append("\n");
+
+        }
+        return str.toString();
+    }
+
+
 
 }
